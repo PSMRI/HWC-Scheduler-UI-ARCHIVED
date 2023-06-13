@@ -90,6 +90,6 @@ jobs:
     - name: Upload WAR file as artifact
       uses: actions/upload-artifact@v2 
       with:
-        name: HWC-UI
-        path: target/tmui-v1.0.war  
+        name: HWC-Scheduler-UI
+        path: target/schedulerui-v1.0.war  
         
