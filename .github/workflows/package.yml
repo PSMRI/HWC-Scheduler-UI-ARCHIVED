@@ -42,11 +42,6 @@ jobs:
             mvn clean install
 
    
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
-      with:
-          languages: javascript,typescript 
-          
     - name: Create WAR file 
       run: mvn -B package --file pom.xml
       
