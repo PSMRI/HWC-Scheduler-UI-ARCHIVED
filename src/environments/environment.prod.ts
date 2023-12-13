@@ -38,7 +38,7 @@ const schedulerIP = 'http://10.208.122.38:8080/';
 const COMMON_API_OPEN = `${commonIP}commonapi-v1.0/`;
 const COMMON_API = `${commonIP}commonapi-v1.0/`;
 const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
-const TM_API = `${tmIP}tmapi-v1.0/`;
+const TM_API = `${tmIP}hwc-facility-service/`;
 
 export const environment = {
   production: true,
