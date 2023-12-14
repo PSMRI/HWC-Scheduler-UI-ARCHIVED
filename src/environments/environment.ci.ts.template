@@ -1,8 +1,8 @@
 /*
-* AMRIT – Accessible Medical Records via Integrated Technology 
-* Integrated EHR (Electronic Health Records) Solution 
+* AMRIT – Accessible Medical Records via Integrated Technology
+* Integrated EHR (Electronic Health Records) Solution
 *
-* Copyright (C) "Piramal Swasthya Management and Research Institute" 
+* Copyright (C) "Piramal Swasthya Management and Research Institute"
 *
 * This file is part of AMRIT.
 *
@@ -19,38 +19,20 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see https://www.gnu.org/licenses/.
 */
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-const commonIP = 'http://10.208.122.32:8080/';
-const tmIP = 'http://10.208.122.32:8080/';
-const schedulerIP = 'http://10.208.122.32:8080/';
-const IP = '10.208.122.32';
-
-// const commonIP = 'http://localhost:8080/';
-// const tmIP = 'http://localhost:8080/';
-// const schedulerIP = 'http://localhost:8080/';
-// const IP = 'localhost';
-
-// With API MAN Configuration
-// const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
-// const COMMON_API = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
-// const TM_API = `http://${IP}:8080/apiman-gateway/IEMR/TM/1.0/`;
-// const SCHEDULER_API = `http://${IP}:8080/apiman-gateway/IEMR/Scheduling/v1.0/`;
-
 // Without API MAN Configuration
-const COMMON_API_OPEN = `${commonIP}hwc-commonapi-v1.0/`;
-const COMMON_API = `${commonIP}hwc-commonapi-v1.0/`;
-const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
-const TM_API = `${tmIP}hwc-facility-service/`;
-
-// const TM_API = `${tmIP}tmapi-v1.0/`;
-const MMU_API = `http://${IP}:8080/mmuapi-v1.0/`;
+const COMMON_API_OPEN = '<%= COMMON_API_BASE %>';
+const COMMON_API = '<%= COMMON_API_BASE %>';
+const SCHEDULER_API = '<%= SCHEDULER_API_BASE %>';
+const TM_API = '<%= TM_API_BASE %>';
 
 export const environment = {
-  production: false,
+  production: true,
 
   app: `TM`,
 
@@ -91,22 +73,21 @@ export const environment = {
 
   getAllSpecialistUrl: `${SCHEDULER_API}/specialist/getSpecialist`,
   getSpecialistByUserIDUrl: `${SCHEDULER_API}specialist/info/`,
-
   getSMSTypeUrl: `${COMMON_API}sms/getSMSTypes`,
   getSMSParameterURL: `${COMMON_API}sms/getSMSParameters`,
   getAllSMSTemplatesUrl: `${COMMON_API}sms/getSMSTemplates`,
   getFullSMSTemplateUrl: `${COMMON_API}sms/getFullSMSTemplate`,
   saveSMSTemplateUrl: `${COMMON_API}sms/saveSMSTemplate`,
   updateSMSTemplateUrl: `${COMMON_API}sms/updateSMSTemplate`,
-  getSwymedLogoutUrl: `${TM_API}videoConsultation/logout`,
+  getSwymedLogoutUrl: `${TM_API}swymed/logout`,
   getChiefComplaintReportUrl: `${TM_API}TMReport/chiefcomplaintreport`,
   getTotalConsultationReportsUrl: `${TM_API}TMReport/TotalConsultationReport`,
   getConsultantReportUrl: `${TM_API}TMReport/ConsultationReport`,
   getMonthlyReportsUrl: `${TM_API}TMReport/MonthlyReport`,
   getDailyReportUrl: `${TM_API}TMReport/DailyReport`,
   licenseUrl: `${COMMON_API}license.html`,
-   apiVersionUrl:`${SCHEDULER_API}version`,
+  apiVersionUrl: `${SCHEDULER_API}version`,
 
-    // Language List
-  getLanguageList: `${COMMON_API}beneficiary/getLanguageList`
+   // Language List
+   getLanguageList: `${COMMON_API}beneficiary/getLanguageList`
 };
