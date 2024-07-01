@@ -1,3 +1,7 @@
+# ❗❗❗ NOTICE ❗❗❗
+
+A new version of the repository is available here [PSMRI/HWC-Scheduler-UI](https://github.com/PSMRI/HWC-Scheduler-UI)
+
 # hwc-scheduler-ui
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0-rc.0.
